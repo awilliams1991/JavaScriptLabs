@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Labs | JavaScript Playground</title>
+    <!-- Bootstrap 3.3.7 minified CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Optional theme -->
+    <link href="css/bootstrap-flatly-theme.css" rel="stylesheet" />
+
+    <!--Custom CSS-->
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <!--Collapsible nav-->
+    <nav id="myTopnav" class="navbar-default navbar-fixed-top">
+        <a href="index.html" class="navbar-brand">JavaScript Playground</a>
+        <ul class="topnav">
+            <li>
+                <a href="index.html">
+                    <span class="glyphicon glyphicon-home"></span> Home
+                </a>
+            </li>
+            <li>
+                <a href="jsNotes.html">
+                    JavaScript
+                </a>
+            </li>
+            <li>
+                <a href="jQueryNotes.html">
+                    jQuery
+                </a>
+            </li>
+            <li>
+                <a href="jQueryPlugins.html">
+                    jQuery Plugins
+                </a>
+            </li>
+            <!--Navbar Dropdown-->
+            <li class="dropdown active">
+                <a href="#" class="dropdown-toggle"
+                   role="button" data-toggle="dropdown" target="_blank"
+                   aria-haspopup="true" aria-expanded="false">
+                    Labs<span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li class="active">
+                        <a href="jsLabs.html">
+                            JavaScript
+                        </a>
+                    </li>
+                    <li>
+                        <a href="jQueryLabs.html">
+                            jQuery
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            <!--/Navbar dropdown-->
+            <li>
+                <a href="forms.html">
+                    Forms
+                </a>
+            </li>
+        </ul>
+    </nav><!--/#navbar-->
+    <!--/Main Nav-->
+    <!--Page Header-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>JavaScript Labs</h1>
+        </div>
+    </div>
+    <!--/Page Header-->
+    <!--Main Content-->
+    <main class="container">
+        <div class="row">
+            <article class="col-md-4">
+                <h2>Mad Libs</h2>
+                <p id="madLibs">
+                    <div>
+                        <input type="text" id="tbForeignCountry" placeholder="Enter Foreign Country..." /><br />
+                        <input type="text" id="tbAdjective" placeholder="Enter Adjective..." /><br />
+                        <input type="text" id="tbAnimal" placeholder="Enter Animal..." /><br />
+                        <input type="text" id="tbVerb" placeholder="Enter Verb..." /><br />
+                        <input type="text" id="tbPlace" placeholder="Enter Place..." /><br />
+                        <input type="text" id="tbTypeLiquid" placeholder="Enter Type of Liquid..." />
+                    </div>
+                </p>
+                <p>
+                    <div>
+                        <input type="button" class="btn btn-warning" value="Mab Lib" id="btnCreate" />
+                    </div>
+                    <span id="madLibResults"></span>
+                </p>
+            </article>
+            <article class="col-md-4">
+                <h2>Multiples</h2>
+                <p id="multiples"></p>
+            </article>
+            <article class="col-md-4">
+                <h2>Temperature Converter</h2>
+                <div class="col-md-6">
+                    <input type="text" id="tbCelciusDegrees" placeholder="temp in degrees celcius" />
+                    <input type="button" class="btn btn-info" value="convert to Farenhiet" id="btnCelcius" />
+                    <span id="conversionResultsC"></span>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="tbFarenhietDegrees" placeholder="temp in degrees farenheit" />
+                    <input type="button" class="btn btn-info" value="convert to Celcius" id="btnFarenhiet" />
+                    <span id="conversionResultsF"></span>
+                </div>
+
+
+            </article>
+            <div class="row">
+                <article class="col-md-6">
+                    <h2>Area Calculators</h2>
+                    <div class="col-md-3">
+                        <!-- Area of Square -->
+                        <input type="text" id="tbHeightSquare" placeholder="Height" />
+                        <input type="text" id="tbWidthSquare" placeholder="Width" />
+                        <input type="button" class="btn btn-info" value="Area Square" id="calculate" />
+                        <span id="areaSquare"></span>
+                        <br />
+                        <!-- Area of Triangle -->
+                        <input type="button" class="btn btn-info" value="Area Triangle" id="calculateTriangle" />
+                        <span id="areaTriangle"></span>
+                        <br />
+                        <br />
+                        <!-- Area of Circle  -->
+                        <input type="text" id="tbRadius" placeholder="Radius" />
+                        <input type="button" class="btn btn-info" value="Area Circle" id="calculateCircle" />
+                        <span id="areaCircle"></span>
+                        <!-- Area of a Ring -->
+                        <input type="text" id="tbInnerRad" placeholder="Area Inner Radius" />
+                        <input type="button" class="btn btn-success" value="Area Ring" id="calcRing" />
+                        <span id="areaRing"></span>
+                    </div>
+                </article>
+                <!-- Change Lab -->
+                <article class="col-md-3">
+                    <h2>Change Lab</h2>
+                    <form>
+                        <input type="text" id="totalMoney" placeholder="How much $ do you have?" />
+                        <input type="button" class="btn btn-success" value="Return Change" id="change" /><br />
+                        <span id="changeReturn"></span>
+                    </form>
+                </article>
+                <!-- Simple Calculator -->
+                <article class="col-md-4">
+                    <h2>Simple Calculator</h2>
+                    <form id="simpcalculator" method="get" action="value">
+                        <input type="number" id="firstNum" placeholder="First Number" />
+                        <input type="number" id="secondNum" placeholder="Second Number" />
+                        <input type="button" class="btn btn-warning" value="+" id="add" />
+                        <input type="button" class="btn btn-warning" value="-" id="subtract" />
+                        <input type="button" class="btn btn-warning" value="&#247;" id="division" />
+                        <input type="button" class="btn btn-warning" value="*" id="multiply" />
+                    </form>
+                    <span id="value"></span>
+                </article>
+                <article class="col-md-4">
+                    <h2>Advanced Calculator</h2>
+                    <form id="calculator" method="get" action="values">
+                        <input type="number" id="firstNumb" placeholder="First Number" />
+                        <input type="number" id="secondNumb" placeholder="Second Number" />
+                        <input type="button" class="btn btn-warning" value="+" id="added" />
+                        <input type="button" class="btn btn-warning" value="-" id="subtracted" />
+                        <input type="button" class="btn btn-warning" value="&#247;" id="divided" />
+                        <input type="button" class="btn btn-warning" value="*" id="multiplied" />
+                    </form>
+                    <span id="values"></span>
+                </article>
+            </div>
+        </div>
+
+
+    </main>
+    <!--/Main Content-->
+    <!--Footer-->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="navbar-text pull-left">
+                &copy; 2019 Alysha Williams
+            </p>
+            <a href="#" class="btn navbar-btn btn-danger pull-right">
+                Go to the top!
+            </a>
+        </div>
+    </nav>
+    <!--/Footer-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jsLabsCode.js"></script>
+</body>
+</html>
